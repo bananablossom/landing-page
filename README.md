@@ -1,6 +1,6 @@
 # landing-page
 
-Finally! My very first CSS Project from The Odin's Fpundations Course. 
+Finally! My very first CSS Project from The Odin's Foundations Course. 
 At first, I was lost and did not know how to start from a blank html page, 
 I did try to finish the mock up within 3 days but I was not satisified with the result. 
 First, I did not feel that I am putting the margin and padding properly and if its in the right places, 
