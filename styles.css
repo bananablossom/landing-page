@@ -1,0 +1,376 @@
+/* RESET */
+
+@import 'meyer-reset.css'; 
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* OUTLINE FOR DEBUGGING */
+
+
+header, main, footer {
+    /* border: 4px solid red; */
+}
+
+section {
+    /* border: 4px solid lime;  */
+}
+body {
+    /* border: 10px solid blue; */
+}
+
+.inner-column {
+    /* border: 4px solid darkorange;  */
+}
+
+
+
+/* CUSTOM PROPERTIES */
+
+html {
+    /* COLORS */
+
+    --darkblue: #1F2937;
+    --blue: #3882F6;
+    --offwhite: #E5E7EB;
+    --headerwhite: #F9FAF8; 
+}
+
+/* IMG & LINKS SETTINGS*/
+
+img {
+    width: 100%; /*Prevents the img from breaking the page*/
+    height: auto; /*Auto calculates the height based on the given width value*/
+}
+
+/* STYLING & FONTS */
+
+body {
+    font-family: sans-serif;
+}
+
+.button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.sign-up.button {
+    color: var(--offwhite);
+    background-color: var(--blue);
+    border-color: var(--blue);
+    border-style: solid;
+}
+
+
+.cta.button {
+    border-color: var(--headerwhite);
+    background-color: var(--blue);
+    border: 2px solid;
+    color: var(--headerwhite);
+}
+.loud-voice {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: .9;
+    color: var(--headerwhite)
+}
+.medium-voice {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+li a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.2;
+}
+
+/* STRUCTURE */
+
+body {
+    display: flex; /*Makes its direct children flexible items*/
+    flex-direction: column; /*The default direction is row, we should specify this*/
+    min-height: 100vh; /*This will determine the minimum height of the viewport*/
+
+}
+
+.inner-column {
+    width: 98%;     /*Set the width of the container based on the parent's size */
+    max-width: 900px;  /*This prevents from overstretching*/
+    margin-left: auto; /*This centers the inner-column container*/
+    margin-right: auto; /*This centers the inner-column container*/
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+}
+
+header .inner-column , footer .inner-column {
+    
+    padding: 20px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* HEADER */
+
+.header-container, footer {
+    
+    background-color: var(--darkblue);
+}
+
+footer .trademark {
+    text-align: center;
+    padding: 5px;
+    color: var(--offwhite);
+}
+
+.nav-links h1 {
+    color: var(--headerwhite);
+    font-size: 20px;
+    margin-right: 20px;
+
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.header-links {
+    display: flex;
+    gap: 8px;
+}
+
+.header-links li a {
+    color: var(--offwhite);
+}
+
+/* SECTIONS */
+
+    /* HEADER CONTENT SECTION */
+.graphic-diptych {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.graphic-diptych .image {
+    width: 98%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    color: var(--offwhite)
+}
+
+section.welcome {
+    background-color: var(--darkblue);
+}
+
+
+    /* PRODUCT SECTION  */
+
+.products .image, .products .text-content {
+    width: 85%;
+
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    gap: 2vh;
+
+}
+
+.info-header {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.card img {
+    border-radius: 5px;
+    padding-bottom: 7px;
+}
+
+.card {
+
+
+}
+
+/* QUOTE SECTION  */
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    width: 85%;
+    gap: 20px;
+    /**/
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    color: var(--darkblue);
+    /**/
+
+
+}
+
+quote {
+    text-align: left;
+    font-size: 20px;
+    color: var(--darkblue);
+
+    
+}
+
+.author {
+    align-self: end;
+    font-size: 20px;
+    font-weight: bold;
+ 
+}
+
+section.quote {
+    background-color: var(--offwhite);
+}
+
+
+/* CALL TO ACTION SECTION */
+
+.inner-column-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 90%;
+    background-color: var(--blue);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: var(--offwhite);
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+
+.cta-content h3 {
+    font-weight: 1000;
+}
+
+/* FOOTER */
+
+/* DESKTOP VIEW */
+
+@media only screen and (min-width: 700px) {
+    .graphic-diptych {
+        padding: 0;
+        flex-direction: row-reverse;
+        flex-basis: 50%;
+    }
+
+    .graphic-diptych .text-content {
+        width: 90%;
+    }
+    
+    .inner-column {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .products {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+        gap: 5vh;
+    }
+
+    .loud-voice {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: .9;
+    }
+    .medium-voice {
+        font-size: 36px;
+        font-weight: bold;
+    
+    }
+
+    quote {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+    
+    .author {
+
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .call-to-action {
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .cta-content {
+        width: 70%;
+        /* border: 1px solid white; */
+}
+
+.nav-links h1 {
+    font-size: 24px;
+}
+
+.header-links {
+    gap: 20px;
+}
+
+
+}
+
+
